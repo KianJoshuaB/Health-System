@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    /* New header styling */
     header {
       background-color: #333;
       color: white;
@@ -20,7 +19,6 @@
       margin: 0;
     }
 
-    /* General layout */
     .container {
       display: flex;
       min-height: 100vh;
@@ -29,7 +27,7 @@
     .sidebar {
       width: 250px;
       transition: width 0.3s ease;
-      background-color: red;  /* Sidebar color changed to red */
+      background-color: red; 
       padding: 20px;
       box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.1);
     }
@@ -43,14 +41,12 @@
       max-height: 80%;
     }
 
-    /* Dashboard styles */
     .dashboard {
       flex-grow: 1;
       padding: 20px;
       background-color: #fff;
     }
 
-    /* Header styling */
     .metrics {
       display: flex;
       justify-content: space-between;
@@ -98,20 +94,16 @@
       margin-bottom: 20px;
     }
 
-    /* Profile picture */
     .profile-pic {
       width: 80%;
       border-radius: 50%;
       margin-top: 20px;
     }
-
-    /* Sidebar chart styling */
     .patient-history-widget {
       margin-top: 20px;
       text-align: center;
     }
 
-    /* Patient health history border styling */
     .history-section {
       margin-top: 40px;
       padding: 20px;
@@ -122,7 +114,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* About Button and Modal styling */
     .about-btn {
       background-color: #333;
       color: white;
@@ -140,7 +131,6 @@
       background-color: #555;
     }
 
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -186,7 +176,6 @@
       background-color: #ff3333;
     }
 
-    /* Responsive adjustments */
     @media screen and (max-width: 768px) {
       .metrics {
         flex-direction: column;
@@ -221,13 +210,12 @@
       <div class="medical-history">
         <h3>Medical History</h3>
         <ul>
-          <li>April 10, 2024: Checkup</li>
-          <li>June 15, 2024: Consultation</li>
-          <li>Aug 19, 2024: Surgery</li>
+          <li>December 10, 2024: Checkup</li>
+          <li>December 15, 2024: Consultation</li>
+          <li>January 19, 2025: Surgery</li>
         </ul>
       </div>
 
-      <!-- About button -->
       <button class="about-btn" onclick="openModal()">About TDBG Dashboard</button>
 
       <button class="contact-btn">Contact Doctor</button>
@@ -260,7 +248,6 @@
         <canvas id="heartRateChart"></canvas>
       </div>
 
-      <!-- Moved Patient Health History Chart -->
       <div class="history-section">
         <h4>Patient Health History (Day 1-7)</h4>
         <canvas id="healthHistoryChart"></canvas>
@@ -272,7 +259,6 @@
     </div>
   </div>
 
-  <!-- Modal for About Section -->
   <div id="aboutModal" class="modal">
     <div class="modal-content">
       <h3>About TDBG Dashboard</h3>
