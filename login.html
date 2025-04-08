@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TDBG - Heart Health</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container left">
+      <img src="images/University_of_San_Agustin_Logo.png" alt="University Logo" class="logo">
+    </div>
+    <h1 class="title">TDBG - Heart Health Monitoring</h1>
+    <div class="logo-container right">
+      <img src="images/COT_LOGO.png" alt="COT Logo" class="logo">
+    </div>
+  </header>
+  
+  <div class="login-container">
+    <h2>Login to TDBG - Heart Health</h2>
+    <form id="login-form">
+      <div class="input-field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+  
+    <a class="user-guide-link" id="user-guide-link">User Guide</a>
+  </div>
+
+  <script>
+    // Handle Login Form submission (for demo purposes, simple validation)
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Example credentials for validation (you can replace this with actual server-side logic)
+      if (username === "user" && password === "password") {
+        alert("Login successful");
+        window.location.href = "index.html"; // Redirect to the index.html (Dashboard) page
+      } else {
+        alert("Invalid credentials. Please try again.");
+      }
+    });
+
+    // Modal User Guide
+    var modal = document.getElementById("user-guide-modal");
+    var guideLink = document.getElementById("user-guide-link");
+    var closeBtn = document.getElementById("close-modal");
+
+    // Show the modal
+    guideLink.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // Close the modal
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Close modal if clicked outside the modal content
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
