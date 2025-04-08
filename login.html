@@ -36,37 +36,31 @@
   </div>
 
   <script>
-    // Handle Login Form submission (for demo purposes, simple validation)
     document.getElementById("login-form").addEventListener("submit", function(event) {
       event.preventDefault();
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
 
-      // Example credentials for validation (you can replace this with actual server-side logic)
       if (username === "user" && password === "password") {
         alert("Login successful");
-        window.location.href = "index.html"; // Redirect to the index.html (Dashboard) page
+        window.location.href = "index.html"; 
       } else {
         alert("Invalid credentials. Please try again.");
       }
     });
 
-    // Modal User Guide
     var modal = document.getElementById("user-guide-modal");
     var guideLink = document.getElementById("user-guide-link");
     var closeBtn = document.getElementById("close-modal");
 
-    // Show the modal
     guideLink.onclick = function() {
       modal.style.display = "block";
     }
 
-    // Close the modal
     closeBtn.onclick = function() {
       modal.style.display = "none";
     }
 
-    // Close modal if clicked outside the modal content
     window.onclick = function(event) {
       if (event.target === modal) {
         modal.style.display = "none";
